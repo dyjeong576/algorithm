@@ -10,7 +10,7 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	
-	map <string, vector<string>> tmp;
+	map <string, int> tmp;
 	vector<int> answer;
 	int num, count, sum;
 	string item, type;
@@ -23,11 +23,11 @@ int main()
 		cin >> count;
 		while(count){
 			cin >> item >> type;
-			tmp[type].push_back(item);
+			tmp[type]++;
 			count--;
 		}
 		for(auto it : tmp){
-			sum *= it.second.size() + 1;
+			sum *= it.second + 1;
 		}
 		answer.push_back(--sum);
 	}
@@ -36,4 +36,6 @@ int main()
 		cout << i << endl;
 	}
 	
+    return 0;
+    
 }
