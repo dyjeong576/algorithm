@@ -17,7 +17,7 @@ int main()
 	
 	cin >> num;
 	
-	for(int i=0; i<num; i++){
+	while(num){
 		tmp.clear();
 		sum = 1;
 		cin >> count;
@@ -29,13 +29,10 @@ int main()
 		for(auto it : tmp){
 			sum *= it.second + 1;
 		}
-		answer.push_back(--sum);
+		cout << --sum << endl;
+		num--;
 	}
 	
-	for(auto i : answer){
-		cout << i << endl;
-	}
+	return 0;
 	
-    return 0;
-    
 }
